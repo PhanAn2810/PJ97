@@ -4,11 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Page</title>
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Tailwind config -->
   <script>
     tailwind.config = {
       theme: {
@@ -28,19 +25,15 @@
 </head>
 <body class="font-sans bg-white text-gray-900">
 
-  <!-- ✅ HEADER -->
   <header class="bg-white text-3xl text-primary font-bold px-4 py-4 flex items-center space-x-2 uppercase h-[107px] z-10 relative">
     <a href="#" class="hover:underline">Home</a>
     <span>&gt;</span>
     <span>Contact</span>
   </header>
 
-  <!-- ✅ CONTACT SECTION with background image -->
   <section class="relative h-[800px] overflow-hidden">
-    <!-- Background image as pseudo div -->
     <div class="absolute inset-0 bg-[url('assets/images/BMW7_.png')] bg-cover bg-no-repeat bg-left scale-x-[1.4] scale-y-[1.2] -translate-x-[250px] -translate-y-[80px] z-0"></div>
 
-    <!-- Contact Form (in front) -->
     <div class="absolute top-1/2 right-0 translate-y-[-50%] h-[670px] w-[532px] bg-secondary p-6 md:p-8 rounded-xl shadow-lg mr-4 z-10">
       <form class="space-y-10">
         <input type="text" placeholder="Full Name.." class="w-full h-[60px] border border-red rounded-[20px] px-4 py-2 text-sm focus:outline-none" />
@@ -56,7 +49,6 @@
     </div>
   </section>
 
-  <!-- ✅ GOOGLE MAP -->
   <section class="w-full">
     <iframe
       class="w-full h-[300px] md:h-[400px]"
