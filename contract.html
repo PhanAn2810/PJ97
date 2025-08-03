@@ -17,7 +17,9 @@
             sans: ['Montserrat', 'sans-serif'],
           },
           colors: {
-             primary: '#700000'
+            red: '#B70000',
+            primary: '#700000',
+            secondary: '#EEEEEE'
           }
         }
       }
@@ -26,33 +28,35 @@
 </head>
 <body class="font-sans bg-white text-gray-900">
 
-  <!-- Header -->
-  <header class="bg-white text-primary text-sm font-bold px-4 py-4 flex items-center space-x-2 uppercase">
-    <a href="index.html" class="hover:underline">Home</a>
+  <!-- ✅ HEADER -->
+  <header class="bg-white text-3xl text-primary font-bold px-4 py-4 flex items-center space-x-2 uppercase h-[107px] z-10 relative">
+    <a href="#" class="hover:underline">Home</a>
     <span>&gt;</span>
     <span>Contact</span>
   </header>
 
-  <!-- Contact Section -->
-  <section class="relative">
-    <!-- Background Image -->
-    <img src="assets/images/BMW7_.png" alt="Contact Car" class="w-full object-cover max-h-[800px]">
+  <!-- ✅ CONTACT SECTION with background image -->
+  <section class="relative h-[800px] overflow-hidden">
+    <!-- Background image as pseudo div -->
+    <div class="absolute inset-0 bg-[url('assets/images/BMW7_.png')] bg-cover bg-no-repeat bg-left scale-x-[1.4] scale-y-[1.2] -translate-x-[250px] -translate-y-[80px] z-0"></div>
 
-    <!-- Contact Form -->
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 md:p-8 rounded-xl shadow-lg w-[90%] max-w-md">
-      <form class="space-y-4">
-        <input type="text" placeholder="Full Name.." class="w-full border border-primary rounded-md px-4 py-2 text-sm focus:outline-none" />
-        <input type="tel" placeholder="Phone Number.." class="w-full border border-primary rounded-md px-4 py-2 text-sm focus:outline-none" />
-        <input type="email" placeholder="Email.." class="w-full border border-primary rounded-md px-4 py-2 text-sm focus:outline-none" />
-        <textarea rows="4" placeholder="What do you have in mind..." class="w-full border border-primary rounded-md px-4 py-2 text-sm focus:outline-none resize-none"></textarea>
-        <button type="submit" class="bg-primary text-white text-sm px-4 py-2 rounded-md hover:bg-red-800">
-          Submit
-        </button>
+    <!-- Contact Form (in front) -->
+    <div class="absolute top-1/2 right-0 translate-y-[-50%] h-[670px] w-[532px] bg-secondary p-6 md:p-8 rounded-xl shadow-lg mr-4 z-10">
+      <form class="space-y-10">
+        <input type="text" placeholder="Full Name.." class="w-full h-[60px] border border-red rounded-[20px] px-4 py-2 text-sm focus:outline-none" />
+        <input type="tel" placeholder="Phone Number.." class="w-full border h-[60px] rounded-[20px] border-red px-4 py-2 text-sm focus:outline-none" />
+        <input type="email" placeholder="Email.." class="w-full border h-[60px] border-red rounded-[20px] px-4 py-2 text-sm focus:outline-none" />
+        <textarea rows="4" placeholder="What do you have in mind..." class="w-full h-[200px] rounded-[20px] border border-red px-4 py-2 text-sm focus:outline-none resize-none"></textarea>
+        <div class="flex justify-center">
+          <button type="submit" class="bg-red text-white rounded-[40px] w-[150px] h-[50px] text-sm px-4 py-2 text-[20px] hover:bg-red-800">
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   </section>
 
-  <!-- Google Map -->
+  <!-- ✅ GOOGLE MAP -->
   <section class="w-full">
     <iframe
       class="w-full h-[300px] md:h-[400px]"
